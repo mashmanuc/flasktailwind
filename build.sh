@@ -2,13 +2,12 @@
 # exit on error
 set -o errexit
 
-# Build commands for front end to create the production build
-rm -rf public
-npm install && npm run build
+# Install Python dependencies
 pip install -r requirements.txt
 
-# Initialize/clear the "static" folder
-mkdir -p static/css
+# Install Node.js dependencies and build Tailwind CSS
+npm install
+npm run build
 
-# Copy the built CSS file to the static folder
-cp src/output.css static/css/main.css
+# Ensure the static/css directory exists
+mkdir -p static/css
