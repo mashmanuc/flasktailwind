@@ -2,12 +2,17 @@
 # exit on error
 set -o errexit
 
+# Create necessary directories
+mkdir -p static/css
+
 # Install Python dependencies
 pip install -r requirements.txt
 
-# Install Node.js dependencies and build Tailwind CSS
+# Install Node.js dependencies
 npm install
-npm run build
 
-# Ensure the static/css directory exists
-mkdir -p static/css
+# Build Tailwind CSS
+npx tailwindcss -i ./src/input.css -o ./static/css/main.css --minify
+
+# Set proper permissions
+chmod -R 755 static
