@@ -1,0 +1,25 @@
+/* Test CSS file */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #2c5282;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.bg-test {
+    background-color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест статичних файлів</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Тест статичних файлів</h1>
+        <div class="bg-test">
+            <p>Якщо ви бачите цей текст зі стилями, значить статичні файли працюють коректно!</p>
+        </div>
+        <div>
+            <p>Посилання на <a href="{{ url_for('index') }}">головну сторінку</a></p>
+        </div>
+    </div>
+</body>
+</html>

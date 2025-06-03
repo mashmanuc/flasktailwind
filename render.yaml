@@ -9,13 +9,7 @@ services:
         value: 3.10.0
       - key: NODE_VERSION
         value: 18.17.0
-    build:
-      commands:
-        - pip install -r requirements.txt
-        - npm install
-        - npm run build
-    envVars:
       - key: PYTHONUNBUFFERED
-        value: true
+        value: "true"
       - key: GUNICORN_CMD_ARGS
         value: "--workers=4 --worker-class=gevent --timeout 120"
